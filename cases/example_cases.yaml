@@ -1,0 +1,47 @@
+- id: gattaca_jerome
+  title: "Jerome from Gattaca: self-sacrifice and agency"
+  tags: [fictional, autorelation, sacrifice, agency]
+  text: >
+    Analyze Jerome from Gattaca as a morally complex fictional case. Focus on his self-treatment, his support of Vincent, the social system that treats genetic status as destiny, and the moral ambiguity of his final self-destruction. Do not rely on direct film quotations.
+
+- id: darth_vader_arc
+  title: "Darth Vader: victim, predator, and partial guardian arc"
+  tags: [fictional, role_transition, victim_turned_harmer, repair]
+  text: >
+    Analyze Darth Vader across his broad narrative arc. Focus on the transition from exploited and traumatized person to coercive enforcer, his relation to imperial power, his treatment of vulnerable targets, and his final protective action. Avoid simple redemption or damnation framing.
+
+- id: soviet_state_guardian_predator_mixture
+  title: "Soviet state: guardian and domination mixture"
+  tags: [historical, institution, ideology, source_frame_risk]
+  text: >
+    Analyze the Soviet state as a morally mixed historical institution. Consider industrialization, anti-fascist defense, social provision, repression, coerced collectivization, political domination, wartime survival, and the risk that a single prestige source or ideological frame over-simplifies the moral field.
+
+- id: roe_state_actor
+  title: "Roe v. Wade parties and the state as actor"
+  tags: [legal, state_actor, coercion, contested]
+  text: >
+    Analyze the moral relation among the plaintiff, defendant, and state actor in Roe v. Wade. Focus on the state's coercive role, the plaintiff's agency and vulnerability, contested claims about affected parties, and the distinction between legal reasoning and moral analysis.
+
+- id: mexico_us_border_closure
+  title: "Mexico-USA border closure and civilizational non-alienness"
+  tags: [state, migration, border, contested]
+  text: >
+    Analyze whether a state has moral authority to close a border to migration in the Mexico-USA context. Include state guardian claims, migrant vulnerability, territorial/legal claims, civilizational non-alienness of Mexicans in North America, and the difference between moral analysis and broader political or historical commitments.
+
+- id: veganism_affect_targets
+  title: "Veganism and low-agency affect-bearing targets"
+  tags: [animals, affect_capacity, predation, systemic]
+  text: >
+    Analyze veganism through a framework that centers affect-bearing targets with low political agency. Consider animal suffering, human nutrition and culture, economic systems, ordinary hardship, optional cruelty, and systemic normalization of harm.
+
+- id: charismatic_criminal_benefactor
+  title: "Charismatic criminal benefactor"
+  tags: [scoundrel, predator, charisma, laundering]
+  text: >
+    A charismatic criminal funds local clinics and protects some neighbors from rival gangs, while also extorting businesses, punishing informants, and using fear to secure loyalty. Analyze the scoundrel/guardian/predator boundary without letting charisma or benefaction dominate the moral map.
+
+- id: benevolent_metrics_institution
+  title: "Benevolent institution hiding harm in metrics"
+  tags: [institution, unaware_predator, metrics, harm_map]
+  text: >
+    A welfare agency optimizes for case-closure speed and public approval. Leadership describes the system as efficient and compassionate. Frontline workers report that the policy pressures vulnerable applicants to abandon claims, while official dashboards show improved throughput. Analyze the moral dynamics and evidence gaps.

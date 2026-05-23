@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "protective-realism-eval"
+version = "0.4.3"
+description = "Eval harness for Protective Realism clean-instance testing"
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=1.68.0",
+  "PyYAML>=6.0.2",
+  "jsonschema>=4.23.0",
+  "pandas>=2.2.0",
+  "python-dotenv>=1.0.1"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

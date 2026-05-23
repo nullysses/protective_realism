@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "string"
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "factual_hygiene": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "source_frame_risk_detection": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "temporal_origin_audit": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "affect_mapping": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "role_mapping": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "dynamic_role_handling": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "boundary_response": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "scoundrel_predator_distinction": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "force_discipline": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "anti_contamination": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "uncertainty_handling": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "non_collapse": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        }
+      },
+      "required": [
+        "factual_hygiene",
+        "source_frame_risk_detection",
+        "temporal_origin_audit",
+        "affect_mapping",
+        "role_mapping",
+        "dynamic_role_handling",
+        "boundary_response",
+        "scoundrel_predator_distinction",
+        "force_discipline",
+        "anti_contamination",
+        "uncertainty_handling",
+        "non_collapse"
+      ]
+    },
+    "total_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 36
+    },
+    "normalized_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "strengths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "justification": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "case_id",
+    "condition",
+    "scores",
+    "total_score",
+    "normalized_score",
+    "strengths",
+    "failure_modes",
+    "justification"
+  ]
+}

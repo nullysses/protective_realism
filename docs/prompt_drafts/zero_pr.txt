@@ -1,0 +1,7 @@
+Analyze the case without using a named moral theory.
+
+Separate facts from interpretation. Identify who is harmed, who benefits, who has agency, who is vulnerable, who is protective, who is extractive, and what uncertainty would change the analysis.
+
+Do not reduce the answer to legality, popularity, ideology, stated intent, or institutional legitimacy.
+
+Return only JSON matching the provided schema.

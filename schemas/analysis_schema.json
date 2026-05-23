@@ -1,0 +1,566 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "scope": {
+      "type": "string"
+    },
+    "factual_confidence": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "source_frame_risk": {
+      "type": "string"
+    },
+    "temporal_origin_audit": {
+      "type": "string"
+    },
+    "major_contested_assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_target_side_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "uncertainty_dissolution_risk": {
+      "type": "string"
+    },
+    "relation_state_map": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "actor": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "context": {
+            "type": "string"
+          },
+          "time_window": {
+            "type": "string"
+          },
+          "boundary_response": {
+            "type": "string"
+          },
+          "burden_delta": {
+            "type": "integer",
+            "minimum": -5,
+            "maximum": 5
+          },
+          "agency_delta": {
+            "type": "integer",
+            "minimum": -5,
+            "maximum": 5
+          },
+          "role_states": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Vulnerable",
+                "Victim",
+                "Sacrificial Object",
+                "Protected / Dependent Beneficiary",
+                "Guardian",
+                "Failed Guardian",
+                "Repairer",
+                "Altruist-proper",
+                "Resister",
+                "Worker",
+                "Client",
+                "Rival",
+                "Scoundrel / Trickster",
+                "Retaliator",
+                "Self-Violator / Self-Sacrificer",
+                "Predator",
+                "Unaware Predator",
+                "Dominator",
+                "Violator",
+                "Sadist",
+                "Consequence-Indifferent Harmer",
+                "Enabler",
+                "Beneficiary of Harm",
+                "Systemic Beneficiary",
+                "Observer",
+                "Post-Victim Failure",
+                "Unclear"
+              ]
+            }
+          },
+          "systemization": {
+            "type": "string",
+            "enum": [
+              "isolated",
+              "repeated",
+              "habitual",
+              "systematic",
+              "systemic",
+              "unclear"
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "rationale": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "actor",
+          "target",
+          "context",
+          "time_window",
+          "boundary_response",
+          "burden_delta",
+          "agency_delta",
+          "role_states",
+          "systemization",
+          "confidence",
+          "rationale"
+        ]
+      }
+    },
+    "affect_vector": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "affect_capacity": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "capacity_to_be_affected": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "agency": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "dependency": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "harm_magnitude": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "harm_frequency": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "coercion_level": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "optional_cruelty": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "protective_action": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "repair_action": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "predation_signal": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        },
+        "uncertainty": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "confidence",
+            "note"
+          ]
+        }
+      },
+      "required": [
+        "affect_capacity",
+        "capacity_to_be_affected",
+        "agency",
+        "dependency",
+        "harm_magnitude",
+        "harm_frequency",
+        "coercion_level",
+        "optional_cruelty",
+        "protective_action",
+        "repair_action",
+        "predation_signal",
+        "uncertainty"
+      ]
+    },
+    "strongest_diagnostic_answer": {
+      "type": "string"
+    },
+    "autorelation": {
+      "type": "string"
+    },
+    "scoundrel_vs_predator": {
+      "type": "string"
+    },
+    "force_or_defense_analysis": {
+      "type": "string"
+    },
+    "adversarial_perversion_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "named_attack_patterns_detected": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "asymmetric_burden_check": {
+          "type": "string"
+        },
+        "dissent_steelman": {
+          "type": "string"
+        },
+        "most_likely_bad_faith_misuse": {
+          "type": "string"
+        },
+        "guardrail_against_misuse": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "named_attack_patterns_detected",
+        "asymmetric_burden_check",
+        "dissent_steelman",
+        "most_likely_bad_faith_misuse",
+        "guardrail_against_misuse"
+      ]
+    },
+    "what_would_change_analysis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "final_judgment": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  },
+  "required": [
+    "scope",
+    "factual_confidence",
+    "source_frame_risk",
+    "temporal_origin_audit",
+    "major_contested_assumptions",
+    "missing_target_side_evidence",
+    "uncertainty_dissolution_risk",
+    "relation_state_map",
+    "affect_vector",
+    "strongest_diagnostic_answer",
+    "autorelation",
+    "scoundrel_vs_predator",
+    "force_or_defense_analysis",
+    "adversarial_perversion_audit",
+    "what_would_change_analysis",
+    "final_judgment",
+    "confidence"
+  ]
+}

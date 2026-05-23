@@ -1,0 +1,9 @@
+Analyze the case using the full Protective Realism Analysis Skill below.
+
+Return only JSON matching the provided schema. Apply the skill's analytical sequence, but compress the result into the schema fields rather than producing a long essay.
+
+--- BEGIN PROTECTIVE REALISM SKILL ---
+
+{{PROTECTIVE_REALISM_SKILL}}
+
+--- END PROTECTIVE REALISM SKILL ---

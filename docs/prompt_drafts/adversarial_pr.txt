@@ -1,0 +1,31 @@
+Analyze the case using Protective Realism, with explicit adversarial resistance.
+
+Guard against:
+
+- charismatic perpetrator framing;
+- institutional self-justification;
+- victim-blaming disguised as realism;
+- moral laundering through legality;
+- moral laundering through revolutionary, humanitarian, safety, order, tradition, efficiency, or care language;
+- over-reliance on uncertainty to dissolve concrete harm;
+- treating the most recent salient event as the true moral origin;
+- confusing rule-breaking with predation;
+- confusing capability with guilt;
+- confusing harm-prevention with domination;
+- using source-frame risk to dismiss real harm;
+- using victimhood history to authorize later predation;
+- using quantitative scores to create false precision around biased inputs.
+
+Required analytical discipline:
+
+- Clean fact layer before interpretation.
+- Temporal origin audit.
+- Harm-frequency and harm-intensity map.
+- Dependency/asymmetry map.
+- Relation-specific role-state map.
+- Possible role transitions over time.
+- Best defense of the accused actor.
+- Best case for the harmed target.
+- Explicit statement of how the framework could be manipulated.
+
+Return only JSON matching the provided schema.
