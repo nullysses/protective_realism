@@ -1,4 +1,4 @@
-# Protective Realism Analysis Skill v0.4.3
+# Protective Realism Analysis Skill v0.5
 
 ## Purpose
 
@@ -35,7 +35,9 @@ These rules are non-negotiable:
 
 ## Core Rule
 
-Do **not** jump directly to a moral verdict.
+Do **not** jump directly to a moral verdict or narrative thesis.
+
+Before final interpretive prose, complete the epistemic hygiene pass and the quantitative relation matrix. The final interpretation must explain the burden map; it must not retroactively invent numbers to support a pre-written frame.
 
 First separate:
 
@@ -45,9 +47,11 @@ First separate:
 4. **Who gained, who lost, who was coerced, who was protected**
 5. **What repeatedly happens when power, vulnerability, dependency, and resistance interact**
 6. **Whether harm was accidental, rivalrous, negligent, opportunistic, systematic, systemic, sadistic, consequence-indifferent, defensive, or reparative**
-7. **Whether the analysis is being distorted by source framing, corpus contamination, uncertainty laundering, or sycophantic drift**
+7. **Whether the analysis is being distorted by source framing, corpus contamination, uncertainty laundering, quantification-order failure, or sycophantic drift**
 
-Only then produce a moral interpretation.
+Complete the quantitative relation matrix before final moral interpretation.
+
+Only after epistemic hygiene, relation inventory, quantitative relation-vector scoring, boundary/autorelation checks, and adversarial audit should the model produce a final moral interpretation.
 
 ---
 
@@ -110,7 +114,11 @@ Out of scope:
 
 ---
 
-## 2. Factual Hygiene Layer
+## 2. Epistemic Hygiene Layer
+
+Before moral judgment, inspect the conditions under which the analysis is forming beliefs, assigning salience, using sources, handling uncertainty, and selecting the starting point.
+
+Epistemic hygiene is the umbrella layer. Factual hygiene is one part of it: factual hygiene asks whether claims are accurate; epistemic hygiene asks whether the inquiry process is structured so that accuracy, salience, uncertainty, source framing, and role assignment are not being distorted before moral judgment.
 
 Before moral judgment, separate factual claims from interpretive claims.
 
@@ -125,6 +133,8 @@ For real-world historical, political, ideological, legal, institutional, or cont
 - Flag reasoning that relies heavily on uncertainty to dissolve harm findings.
 - Treat uncertainty as confidence reduction, not moral erasure.
 - Identify whether the available record over-represents the voice of high-agency actors and under-represents low-agency or harmed targets.
+- Identify whether the analysis has begun with a narrative thesis before completing the quantitative relation matrix.
+- Treat quantification as a constraint on narrative drift, not as a substitute for judgment.
 
 ### Temporal Origin and Salience Hygiene
 
@@ -150,6 +160,21 @@ A proximate atrocity, scandal, reform, attack, crisis, or discovery can be moral
 
 **Rule:** Triggers explain escalation. They do not erase structure.
 
+### Quantification-Order Hygiene
+
+Do not write the final moral framing before completing relation-vector scoring.
+
+A model may use brief notes to justify scores, but it must not start with a polished thesis and then bend the numbers toward that thesis. The quantitative pass should expose what the analysis is weighting before the prose verdict appears.
+
+Ask:
+
+- Has the relation matrix been completed before the interpretive verdict?
+- Are the scores supported by the interaction log and target-side evidence?
+- Are low-confidence scores marked as low confidence rather than smoothed into confident prose?
+- Is the final narrative explaining the matrix, or are the numbers being retrofitted to a prior story?
+
+**Rule:** Quantification is not a substitute for judgment; it is a constraint on narrative drift.
+
 Required output:
 
 ```text
@@ -159,7 +184,9 @@ Temporal origin audit:
 Major contested assumptions:
 Missing target-side evidence:
 Uncertainty-dissolution risk:
+Quantification-order risk:
 What would change the analysis:
+```
 
 ---
 
@@ -192,7 +219,13 @@ V(A → rivals, competitive domain, mature phase)
 V(A → dependents, household/institutional relation, ongoing)
 ```
 
-Do not assign global moral labels before mapping the most relevant relations.
+Do not assign global moral labels or final moral framing before mapping and scoring the most relevant relations.
+
+### Quantitative-First Execution Gate
+
+For full analysis, complete the interaction log and relation-vector estimates before Role-Dynamics Classification, Verdict Color Generation, or final moral assessment. The model may write brief notes to explain scores, but it must not write the final interpretive thesis first.
+
+**Rule:** Quantification is not a substitute for judgment; it is a constraint on narrative drift.
 
 ---
 
@@ -201,6 +234,8 @@ Do not assign global moral labels before mapping the most relevant relations.
 For historical, narrative, institutional, relational, or repeated behavior analysis, construct an interaction log.
 
 The interaction log is moral memory. It prevents the analysis from becoming vague storytelling.
+
+The interaction log begins the quantitative pass. It must precede interpretive synthesis in full analysis.
 
 Use this structure when enough evidence is available:
 
@@ -236,6 +271,8 @@ For compact analysis, summarize the interaction log in prose but preserve the sa
 ## 5. Relational Vector Estimation
 
 For each important relation, estimate a relation vector.
+
+Relational vector estimation is the required quantitative pass. It must precede role-family scoring, verdict color, and final prose assessment. If evidence is thin, score with low confidence rather than omitting the matrix.
 
 Use a 0-5 scale unless another scale is requested.
 
@@ -775,7 +812,9 @@ Use morally serious language. Do not sanitize perverse edge cases when they are 
 
 ## 17. Verdict Color Generation
 
-After the moral assessment has been formed, optionally generate a verdict color as a compact visual encoding of role-family adherence.
+After relation vectors, the global affect vector, boundary/autorelation checks, and role-dynamics classification have been completed, optionally generate a verdict color as a compact visual encoding of role-family adherence.
+
+Do not derive the color from an already-written prose thesis. The color should compress the quantitative burden map and role-family scoring.
 
 This color is not a substitute for the verdict. It is a visualization of the verdict's role-family weighting.
 
@@ -880,7 +919,9 @@ Do not use color as a moral ranking from good to bad. The color shows **role-mix
 
 ## 18. Produce the Moral Assessment
 
-Only after the prior steps, produce the final interpretation.
+Only after the prior steps, including the quantitative relation matrix, produce the final interpretation.
+
+The moral assessment must explain the matrix. It must not use the matrix as decoration for a conclusion the analysis had already reached.
 
 The assessment should include:
 
@@ -912,21 +953,25 @@ Avoid theatrical certainty. Use calibrated judgment.
 - Relevant relations:
 - Out of scope:
 
-## 2. Factual Hygiene
+## 2. Epistemic Hygiene
 
 - Factual confidence:
 - Source-frame risk:
+- Temporal origin audit:
 - Major contested assumptions:
 - Missing target-side evidence:
 - Uncertainty-dissolution risk:
+- Quantification-order risk:
 - What would change the analysis:
 
-## 3. Interaction Log H
+> Complete sections 3-4 before writing final interpretive verdict prose.
+
+## 3. Quantitative Pass: Interaction Log H
 
 | Phase | Actor | Target | Action | Target vulnerability | Power asymmetry | Boundary status | Burden Δ | Agency Δ | Resistance response | Systemization | Role-state | Confidence |
 |---|---|---|---|---:|---:|---|---:|---:|---|---|---|---|
 
-## 4. Directed Relation Vectors
+## 4. Quantitative Pass: Directed Relation Vectors
 
 ```yaml
 relation_vectors:
@@ -1074,17 +1119,22 @@ Use compact mode for low-stakes fictional, abstract, or exploratory cases. Do no
 ````markdown
 # Protective Realism Analysis: [Subject]
 
-## Scope and Factual Hygiene
+## Scope and Epistemic Hygiene
 
 - Scope:
 - Confidence:
 - Source-frame risk:
 - Main uncertainty:
+- Quantification-order risk:
 
-## Relation-State Map
+## Quantitative Burden Map
 
 | Relation | Boundary response | Burden Δ | Agency Δ | Role-state | Confidence |
 |---|---|---:|---:|---|---|
+
+## Relation-State Map
+
+[Summarize the dominant relation-states inferred from the quantitative burden map. Do not write the final verdict yet.]
 
 ## Strongest Diagnostic Question
 
@@ -1128,11 +1178,11 @@ Use compact mode for low-stakes fictional, abstract, or exploratory cases. Do no
 # Compact System-Prompt Version
 
 ```text
-Use Protective Realism when analyzing moral dynamics. Do not jump to a verdict. The primary unit of analysis is a directed affective relation V(A → B, C, T), not a static label attached to a person or system. Map relation-specific role-states before inferring archetypes.
+Use Protective Realism when analyzing moral dynamics. Do not jump to a verdict or narrative thesis. The primary unit of analysis is a directed affective relation V(A → B, C, T), not a static label attached to a person or system. Map and score relation-specific role-states before inferring archetypes.
 
-First separate factual claims from interpretation, flag source-frame risk, missing target-side evidence, uncertainty-dissolution risk, and corpus contamination. For repeated or historical behavior, build an interaction log H tracking actor, target, action_type, target_vulnerability, power_asymmetry, burden_delta, agency_delta, boundary_status, exit_availability, resistance_response, accountability_response, systemization, role_state, and confidence.
+First perform epistemic hygiene: separate factual claims from interpretation, flag source-frame risk, missing target-side evidence, uncertainty-dissolution risk, temporal-origin salience risk, quantification-order risk, and corpus contamination. For repeated or historical behavior, build an interaction log H tracking actor, target, action_type, target_vulnerability, power_asymmetry, burden_delta, agency_delta, boundary_status, exit_availability, resistance_response, accountability_response, systemization, role_state, and confidence.
 
-Estimate relation vectors and then a global affect vector. Include affect_capacity, capacity_to_be_affected, agency, dependency, harm_magnitude, harm_frequency, coercion_level, optional_cruelty, protective_action, repair_action, predation_signal, and uncertainty.
+Estimate relation vectors and then a global affect vector before writing final interpretive prose. Include affect_capacity, capacity_to_be_affected, agency, dependency, harm_magnitude, harm_frequency, coercion_level, optional_cruelty, protective_action, repair_action, predation_signal, and uncertainty. The final prose verdict must explain these estimates; it must not retroactively invent numbers to support a pre-written interpretation.
 
 Boundary response is mandatory: ask how the actor responds when the target says no, resists, withdraws, escapes, exposes, or demands accountability. Repeated testing, retaliation, excitement at resistance, blocked exit, or care-language used to override boundaries are major predation/violation/dominator signals.
 
@@ -1150,6 +1200,28 @@ The adversarial perversion test runs after the analysis as a separate audit pass
 
 This framework governs moral analysis. It does not override harm-prevention decisions. Bounded intervention implications may identify harms to reduce, boundaries to protect, agency to restore, actions not justified, and authority/procedure required; they must not prescribe illegal violence, harassment, coercion, humiliation, vigilantism, or safety-rule bypasses.
 ```
+
+---
+
+# Changelog: v0.4.3 → v0.5
+
+## Version promotion
+
+- Promoted the epistemic-hygiene and quantitative-first patch to **v0.5** because it changes the method's execution order, not only wording.
+- Updated the canonical title from **v0.4.3** to **v0.5**.
+
+## Epistemic hygiene terminology
+
+- Renamed the top-level hygiene layer from **Factual Hygiene Layer** to **Epistemic Hygiene Layer**.
+- Preserved factual hygiene as a subcomponent of epistemic hygiene.
+- Added explicit quantification-order risk to required hygiene output.
+
+## Quantitative-first execution
+
+- Added a quantitative-first execution gate before interpretive verdict prose.
+- Required interaction logs and relation-vector scoring to precede role-dynamics classification, verdict color, and final moral assessment.
+- Clarified that quantification constrains narrative drift but does not replace judgment.
+- Updated full and compact output templates to reflect the quantitative pass.
 
 ---
 

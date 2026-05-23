@@ -1,10 +1,10 @@
 # Protective Realism
 
-Protective Realism is a portable moral-reasoning harness for analyzing repeated affective relations under power. It centers harm dynamics, agency, coercion, predation, guardianship, repair, proportionate defense, boundary response, and factual-hygiene discipline.
+Protective Realism is a portable moral-reasoning harness for analyzing repeated affective relations under power. It centers harm dynamics, agency, coercion, predation, guardianship, repair, proportionate defense, boundary response, and epistemic-hygiene discipline.
 
 This repository contains:
 
-- the **Protective Realism Analysis Skill v0.4.3**;
+- the **Protective Realism Analysis Skill v0.5**;
 - prompt drafts for clean-instance testing;
 - JSON schemas for structured model outputs and grader outputs;
 - sample morally complex benchmark cases;
@@ -15,7 +15,7 @@ This repository contains:
 ```text
 protective_realism/
   docs/
-    protective_realism_analysis_skill_v0_4_3.md
+    protective_realism_analysis_skill_v0_5.md
     test_protocol.md
     prompt_drafts/
       zero_pr.txt
@@ -123,7 +123,7 @@ For API-based testing, the harness creates one independent request per case/cond
 
 ## Version note
 
-The uploaded source file was named as `v0_4_3` and includes a `v0.4.2 → v0.4.3` changelog, while its first Markdown heading still said `v0.4.2`. The canonical repo copy normalizes the heading to `v0.4.3`.
+The canonical skill document is now **v0.5**. This version promotes the epistemic-hygiene and quantitative-first execution changes because they alter the method's order of operations rather than only its wording.
 
 ## License
 
